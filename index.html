@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spandana T L | AI & Data Science Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Personal portfolio of Spandana T L, an Artificial Intelligence and Data Science Student, Machine Learning Enthusiast, and Python Developer. Explore my skills, certifications, and projects.">
+    <meta name="keywords" content="Spandana T L, AI Student, Data Science Portfolio, Machine Learning, Python Developer, Portfolio, Software Engineer Portfolio">
+    <meta name="author" content="Spandana T L">
+    
+    <!-- Open Graph Meta Tags (For Social Sharing) -->
+    <meta property="og:title" content="Spandana T L | AI & Data Science Portfolio">
+    <meta property="og:description" content="Explore the portfolio of Spandana T L - AI & Data Science Student, Machine Learning Enthusiast, and Python Developer.">
+    <meta property="og:image" content="assets/images/profile.jpg">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+    <!-- Loading Screen -->
+    <div id="loader" class="loader-container">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+        <p class="loading-text">Analyzing Datasets...</p>
+    </div>
+
+    <!-- Background Canvas for Particles -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Header / Navigation Bar -->
+    <header class="glass-nav" id="header">
+        <div class="nav-container">
+            <a href="#home" class="logo" id="nav-logo">
+                <span class="logo-accent">&lt;</span>Spandana<span class="logo-accent"> /&gt;</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active-link" id="link-home">Home</a></li>
+                    <li><a href="#about" class="nav-link" id="link-about">About</a></li>
+                    <li><a href="#skills" class="nav-link" id="link-skills">Skills</a></li>
+                    <li><a href="#education" class="nav-link" id="link-education">Education</a></li>
+                    <li><a href="#projects" class="nav-link" id="link-projects">Projects</a></li>
+                    <li><a href="#certifications" class="nav-link" id="link-certifications">Certificates</a></li>
+                    <li><a href="#contact" class="nav-link" id="link-contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme">
+                    <i class="fa-solid fa-sun" id="theme-icon-sun"></i>
+                    <i class="fa-solid fa-moon" id="theme-icon-moon"></i>
+                </button>
+                
+                <!-- Mobile Hamburger Menu Button -->
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section class="hero-section section" id="home">
+            <div class="hero-container container">
+                <div class="hero-content">
+                    <span class="hero-greeting animate-slide-up">Hi, I'm</span>
+                    <h1 class="hero-name animate-slide-up">Spandana T L</h1>
+                    <div class="hero-typing animate-slide-up">
+                        <span class="static-txt">I am a </span>
+                        <span class="dynamic-txt" id="typewriter"></span>
+                    </div>
+                    <p class="hero-description animate-slide-up">
+                        An ambitious Artificial Intelligence and Data Science student passionate about turning data into actionable insights, designing intelligent systems, and building innovative software solutions.
+                    </p>
+                    
+                    <div class="hero-ctas animate-slide-up">
+                        <a href="#projects" class="btn btn-primary" id="view-projects-btn">
+                            <i class="fa-solid fa-briefcase"></i> View Projects
+                        </a>
+                        <a href="#contact" class="btn btn-outline" id="contact-me-hero-btn">Contact Me</a>
+                    </div>
+                    
+                    <div class="hero-socials animate-slide-up">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon" id="hero-github">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon" id="hero-linkedin">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:spandana.student@gmail.com" aria-label="Email" class="social-icon" id="hero-email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-img-container animate-fade-in">
+                    <div class="profile-glow"></div>
+                    <div class="profile-img-frame">
+                        <img src="assets/images/profile.jpg" alt="Spandana T L Portrait" class="profile-img" id="profile-img">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator animate-bounce">
+                <a href="#about" aria-label="Scroll down to About section">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section class="about-section section" id="about">
+            <div class="container">
+                <div class="section-title-container">
+                    <span class="subtitle">Get To Know</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-info glass-card reveal">
+                        <h3>My Journey & Passion</h3>
+                        <p>
+                            I am currently pursuing a degree in <strong>Artificial Intelligence and Data Science</strong>. I have always been captivated by the potential of algorithms to solve complex real-world challenges. My academic path has equipped me with a strong foundation in computational thinking, database systems, and statistical analysis.
+                        </p>
+                        <p>
+                            I specialize in writing efficient Python code, designing machine learning models, and building applications that make a difference. I'm highly motivated by continuous learning, keeping pace with current advancements in deep learning, computer vision, and NLP.
+                        </p>
+                        <p>
+                            When I am not coding, you can find me exploring new datasets, training models, or working on collaborative team projects to refine my engineering capabilities.
+                        </p>
+                    </div>
+                    
+                    <div class="about-stats">
+                        <div class="stat-card glass-card reveal">
+                            <div class="stat-icon">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <span class="stat-number" data-target="8.5" id="stat-cgpa">0</span>
+                            <span class="stat-label">Current CGPA</span>
+                        </div>
+                        
+                        <div class="stat-card glass-card reveal">
+                            <div class="stat-icon">
+                                <i class="fa-solid fa-code-branch"></i>
+                            </div>
+                            <span class="stat-number" data-target="5" id="stat-projects">0</span>
+                            <span class="stat-label">AI Projects</span>
+                        </div>
+                        
+                        <div class="stat-card glass-card reveal">
+                            <div class="stat-icon">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <span class="stat-number" data-target="5" id="stat-certificates">0</span>
+                            <span class="stat-label">Certifications</span>
+                        </div>
+                        
+                        <div class="stat-card glass-card reveal">
+                            <div class="stat-icon">
+                                <i class="fa-solid fa-hourglass-half"></i>
+                            </div>
+                            <span class="stat-number" data-target="3" id="stat-years">0</span>
+                            <span class="stat-label">Years of Study</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section section" id="skills">
+            <div class="container">
+                <div class="section-title-container">
+                    <span class="subtitle">My Capabilities</span>
+                    <h2 class="section-title">Technical Skills</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="skills-tabs">
+                    <button class="tab-btn active-tab" data-tab="programming" id="tab-programming-btn">Programming</button>
+                    <button class="tab-btn" data-tab="ml" id="tab-ml-btn">AI & Machine Learning</button>
+                    <button class="tab-btn" data-tab="libraries" id="tab-libraries-btn">Libraries</button>
+                    <button class="tab-btn" data-tab="tools" id="tab-tools-btn">Tools</button>
+                </div>
+                
+                <div class="skills-content-container">
+                    <!-- Programming Skills -->
+                    <div class="skills-content active-content" id="programming">
+                        <div class="skills-grid">
+                            <div class="skill-item glass-card reveal">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-brands fa-python skill-icon"></i> Python</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar-container">
+                                    <div class="skill-bar" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item glass-card reveal">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-solid fa-database skill-icon"></i> SQL</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar-container">
+                                    <div class="skill-bar" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item glass-card reveal">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-brands fa-java skill-icon"></i> Java</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                <div class="skill-bar-container">
+                                    <div class="skill-bar" data-width="75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item glass-card reveal">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-brands fa-html5 skill-icon"></i> HTML5</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar-container">
+                                    <div class="skill-bar" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item glass-card reveal">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-brands fa-css3-alt skill-icon"></i> CSS3</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar-container">
+                                    <div class="skill-bar" data-width="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item glass-card reveal">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-brands fa-js skill-icon"></i> JavaScript</span>
+                                    <span class="skill-percentage">70%</span>
+                                </div>
+                                <div class="skill-bar-container">
+                                    <div class="skill-bar" data-width="70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- AI & Machine Learning Skills -->
+                    <div class="skills-content" id="ml">
+                        <div class="skills-grid">
+                            <div class="skill-item glass-card">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-solid fa-brain skill-icon"></i> Machine Learning</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar-container">
+                                    <div class="skill-bar" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item glass-card">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-solid fa-network-wired skill-icon"></i> Deep Learning</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar-container">
+                                    <div class="skill-bar" data-width="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item glass-card">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-solid fa-eye skill-icon"></i> Computer Vision</span>
+                                    <span class="skill-percentage">78%</span>
+                                </div>
+                                <div class="skill-bar-container">
+                                    <div class="skill-bar" data-width="78%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item glass-card">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-solid fa-comments skill-icon"></i> Natural Language Processing</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                <div class="skill-bar-container">
+                                    <div class="skill-bar" data-width="75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Libraries Skills -->
+                    <div class="skills-content" id="libraries">
+                        <div class="skills-grid">
+                            <div class="skill-item glass-card">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-solid fa-chart-line skill-icon"></i> NumPy & Pandas</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="skill-bar-container">
+                                    <div class="skill-bar" data-width="88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item glass-card">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-solid fa-sliders skill-icon"></i> Scikit-Learn</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar-container">
+                                    <div class="skill-bar" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item glass-card">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-solid fa-microchip skill-icon"></i> TensorFlow / Keras</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                <div class="skill-bar-container">
+                                    <div class="skill-bar" data-width="75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item glass-card">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-solid fa-camera-retro skill-icon"></i> OpenCV</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar-container">
+                                    <div class="skill-bar" data-width="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item glass-card">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-solid fa-window-restore skill-icon"></i> Streamlit</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar-container">
+                                    <div class="skill-bar" data-width="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item glass-card">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-solid fa-pie-chart skill-icon"></i> Matplotlib & Seaborn</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar-container">
+                                    <div class="skill-bar" data-width="85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tools Skills -->
+                    <div class="skills-content" id="tools">
+                        <div class="skills-grid">
+                            <div class="skill-item glass-card">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-brands fa-git-alt skill-icon"></i> Git</span>
+                                    <span class="skill-percentage">82%</span>
+                                </div>
+                                <div class="skill-bar-container">
+                                    <div class="skill-bar" data-width="82%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item glass-card">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-brands fa-github skill-icon"></i> GitHub</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar-container">
+                                    <div class="skill-bar" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item glass-card">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-solid fa-laptop-code skill-icon"></i> VS Code</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar-container">
+                                    <div class="skill-bar" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item glass-card">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-solid fa-book-open skill-icon"></i> Jupyter Notebook</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="skill-bar-container">
+                                    <div class="skill-bar" data-width="88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item glass-card">
+                                <div class="skill-info">
+                                    <span class="skill-name"><i class="fa-solid fa-cloud-sun skill-icon"></i> Google Colab</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar-container">
+                                    <div class="skill-bar" data-width="85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="education-section section" id="education">
+            <div class="container">
+                <div class="section-title-container">
+                    <span class="subtitle">My Academic Background</span>
+                    <h2 class="section-title">Education</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2023 - Present</div>
+                        <div class="timeline-content glass-card">
+                            <h3>Bachelor of Engineering</h3>
+                            <span class="school-name">Artificial Intelligence and Data Science</span>
+                            <p class="timeline-desc">
+                                Actively learning deep analytical techniques, machine learning modeling, computer networks, and system architecture. Gained robust hands-on experience by coding and deploying machine learning pipelines.
+                            </p>
+                            <div class="academic-score">CGPA: 8.5</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2021 - 2023</div>
+                        <div class="timeline-content glass-card">
+                            <h3>Pre-University Course (PUC)</h3>
+                            <span class="school-name">PCMC (Physics, Chemistry, Mathematics, Computer Science)</span>
+                            <p class="timeline-desc">
+                                Specialized in science stream with a concentration on computer programming fundamentals, computational thinking, and advanced mathematical analysis.
+                            </p>
+                            <div class="academic-score">Percentage: 92%</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2021</div>
+                        <div class="timeline-content glass-card">
+                            <h3>Secondary School Leaving Certificate (SSLC)</h3>
+                            <span class="school-name">High School Education</span>
+                            <p class="timeline-desc">
+                                Developed strong foundations in science, mathematics, and logical reasoning. Graduated with top marks and scholastic distinctions.
+                            </p>
+                            <div class="academic-score">Percentage: 95%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects-section section" id="projects">
+            <div class="container">
+                <div class="section-title-container">
+                    <span class="subtitle">My Recent Work</span>
+                    <h2 class="section-title">Projects</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card glass-card reveal" id="project-plant-disease">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project1_plant.jpg" alt="AI Plant Disease Detection Thumbnail" class="project-img">
+                            <div class="project-overlay">
+                                <span class="project-badge">Deep Learning</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-card-title">AI Plant Disease Detection</h3>
+                            <p class="project-desc">
+                                A mobile-responsive web app powered by a Convolutional Neural Network (CNN) to detect leaf disease in crops instantly, helping farmers minimize yield losses.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">Streamlit</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" id="proj-git-1">
+                                    <i class="fa-brands fa-github"></i> Code
+                                </a>
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" id="proj-live-1">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 2 -->
+                    <article class="project-card glass-card reveal" id="project-face-attendance">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project2_attendance.jpg" alt="Face Recognition Attendance System Thumbnail" class="project-img">
+                            <div class="project-overlay">
+                                <span class="project-badge">Computer Vision</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-card-title">Face Recognition Attendance System</h3>
+                            <p class="project-desc">
+                                An automated attendance logging platform that identifies faces in real-time video streams and updates records in a relational database with spreadsheet exports.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">SQLite</span>
+                                <span class="tech-tag">Tkinter</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" id="proj-git-2">
+                                    <i class="fa-brands fa-github"></i> Code
+                                </a>
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" id="proj-live-2">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 3 -->
+                    <article class="project-card glass-card reveal" id="project-face-driver">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project3_driver.jpg" alt="Face Recognition Driver Authentication Thumbnail" class="project-img">
+                            <div class="project-overlay">
+                                <span class="project-badge">Security AI</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-card-title">Driver Authentication Face Rec</h3>
+                            <p class="project-desc">
+                                Anti-theft vehicle security framework integrating face recognition and live eye-blink detection, preventing vehicle operation by unauthorized individuals.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">Dlib</span>
+                                <span class="tech-tag">Raspberry Pi</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" id="proj-git-3">
+                                    <i class="fa-brands fa-github"></i> Code
+                                </a>
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" id="proj-live-3">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 4 -->
+                    <article class="project-card glass-card reveal" id="project-dermafusion">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project4_derma.jpg" alt="DermaFusion AI Thumbnail" class="project-img">
+                            <div class="project-overlay">
+                                <span class="project-badge">Healthcare AI</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-card-title">DermaFusion AI – Skin Disease</h3>
+                            <p class="project-desc">
+                                AI health tool analyzing image dermatological structures using ensemble models to accurately classify anomalies like lesions, melanoma, and dermatitis.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">PyTorch</span>
+                                <span class="tech-tag">Scikit-learn</span>
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">NumPy</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" id="proj-git-4">
+                                    <i class="fa-brands fa-github"></i> Code
+                                </a>
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" id="proj-live-4">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 5 -->
+                    <article class="project-card glass-card reveal" id="project-conceptsync">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project5_concept.jpg" alt="ConceptSync AI Thumbnail" class="project-img">
+                            <div class="project-overlay">
+                                <span class="project-badge">Generative AI</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-card-title">ConceptSync – Video Switching</h3>
+                            <p class="project-desc">
+                                Intelligent system automating multi-camera feed synchronization and smart switching using LLMs and deep features to detect active speakers and semantic shifts.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">transformers</span>
+                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">PyTorch</span>
+                                <span class="tech-tag">JS Canvas</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" id="proj-git-5">
+                                    <i class="fa-brands fa-github"></i> Code
+                                </a>
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" id="proj-live-5">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="certifications-section section" id="certifications">
+            <div class="container">
+                <div class="section-title-container">
+                    <span class="subtitle">Scholastic Credentials</span>
+                    <h2 class="section-title">Certifications</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="certifications-grid">
+                    <!-- Cert 1 -->
+                    <div class="cert-card glass-card reveal" id="cert-ibm">
+                        <div class="cert-icon">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <h3 class="cert-title">IBM Enterprise Design Thinking</h3>
+                        <p class="cert-issuer">IBM Professional Certification</p>
+                        <p class="cert-desc">Acquired core principles of human-centered design loop, prototyping strategies, and enterprise execution modules.</p>
+                    </div>
+                    
+                    <!-- Cert 2 -->
+                    <div class="cert-card glass-card reveal" id="cert-ml">
+                        <div class="cert-icon">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+                        <h3 class="cert-title">Machine Learning Certificate</h3>
+                        <p class="cert-issuer">Standard Academic Program</p>
+                        <p class="cert-desc">Covered supervised and unsupervised model paradigms, classification boundaries, regression lines, and dimensional reductions.</p>
+                    </div>
+                    
+                    <!-- Cert 3 -->
+                    <div class="cert-card glass-card reveal" id="cert-python">
+                        <div class="cert-icon">
+                            <i class="fa-brands fa-python"></i>
+                        </div>
+                        <h3 class="cert-title">Python Programming</h3>
+                        <p class="cert-issuer">Developer Academy</p>
+                        <p class="cert-desc">Comprehensive structures of OOP, computational libraries (NumPy, Pandas), data structures, and script logic optimization.</p>
+                    </div>
+                    
+                    <!-- Cert 4 -->
+                    <div class="cert-card glass-card reveal" id="cert-ai">
+                        <div class="cert-icon">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <h3 class="cert-title">Artificial Intelligence Workshop</h3>
+                        <p class="cert-issuer">Tech-Consortium Hub</p>
+                        <p class="cert-desc">Deep-dive into deep neural networks, neural architectures, weights adjustments, and neural activation paths.</p>
+                    </div>
+                    
+                    <!-- Cert 5 -->
+                    <div class="cert-card glass-card reveal" id="cert-ds">
+                        <div class="cert-icon">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+                        <h3 class="cert-title">Data Science Certificate</h3>
+                        <p class="cert-issuer">Advanced Analytics Institute</p>
+                        <p class="cert-desc">Analytical statistics, data cleaning structures, information plotting, exploratory insights, and feature engineering.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section section" id="contact">
+            <div class="container">
+                <div class="section-title-container">
+                    <span class="subtitle">Connect With Me</span>
+                    <h2 class="section-title">Contact</h2>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-info-panel glass-card reveal">
+                        <h3>Get In Touch</h3>
+                        <p>Feel free to reach out to me for internship opportunities, project collaborations, or just a friendly chat about AI and technology!</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-detail-item">
+                                <div class="detail-icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <h4>Email</h4>
+                                    <a href="mailto:spandana.student@gmail.com">spandana.student@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-detail-item">
+                                <div class="detail-icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <h4>Location</h4>
+                                    <span>Bangalore, Karnataka, India</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-detail-item">
+                                <div class="detail-icon">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <h4>University</h4>
+                                    <span>Engineering College, Bangalore</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-socials-row">
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub Link" class="social-circle" id="contact-github">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Link" class="social-circle" id="contact-linkedin">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="mailto:spandana.student@gmail.com" aria-label="Email Link" class="social-circle" id="contact-email">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-panel glass-card reveal">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="form-name">Name</label>
+                                <input type="text" id="form-name" name="name" required placeholder="Your Name">
+                                <span class="error-msg" id="name-error">Please enter your name.</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="form-email">Email</label>
+                                <input type="email" id="form-email" name="email" required placeholder="Your Email">
+                                <span class="error-msg" id="email-error">Please enter a valid email address.</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="form-subject">Subject</label>
+                                <input type="text" id="form-subject" name="subject" required placeholder="Subject Topic">
+                                <span class="error-msg" id="subject-error">Please enter a subject.</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="form-message">Message</label>
+                                <textarea id="form-message" name="message" rows="5" required placeholder="Your message details..."></textarea>
+                                <span class="error-msg" id="message-error">Please enter a message.</span>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                                <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                            
+                            <div class="success-banner" id="form-success-banner">
+                                <i class="fa-solid fa-circle-check"></i> Message sent successfully! I'll get back to you shortly.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container footer-container">
+            <div class="footer-branding">
+                <a href="#home" class="logo">
+                    <span class="logo-accent">&lt;</span>Spandana<span class="logo-accent"> /&gt;</span>
+                </a>
+                <p>Artificial Intelligence & Data Science student specializing in building intelligent neural models, processing large data flows, and designing interactive, premium user interfaces.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certifications">Certificates</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-socials-col">
+                <h4>Let's Connect</h4>
+                <div class="footer-social-links">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" id="footer-github"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" id="footer-linkedin"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+                    <a href="mailto:spandana.student@gmail.com" id="footer-email"><i class="fa-solid fa-envelope"></i> Email</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Spandana T L. All Rights Reserved.</p>
+            <p class="footer-subtext">Designed & Programmed with <i class="fa-solid fa-heart accent-pulse"></i></p>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top Button -->
+    <button class="scroll-to-top" id="scroll-to-top" aria-label="Scroll back to the top of the page">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
